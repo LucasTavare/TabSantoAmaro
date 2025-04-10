@@ -1,0 +1,34 @@
+.menu{
+   background-color: #081035;
+   width: 100%;
+   height: max-content 100%;
+   display: grid;
+   align-items: start;
+   justify-items: center;
+   
+}
+
+.menu .corpo-menu{
+    display: grid;
+    gap: 10vh;
+    margin-top: 10vh;
+    position: fixed;
+}
+
+.menu img{
+    height: 25vh;
+    width: 25vh;
+}
+
+.menu .corpo-menu ul{
+    display: grid;
+    gap: 30px;
+    list-style: none; 
+    text-align: center;
+}
+
+.menu .corpo-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}

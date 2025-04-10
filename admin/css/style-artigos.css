@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+.button-adicionar{
+    width: 15vw;
+    height: 8vh;
+    background-color: #081035;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-radius: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+}
+
+.linha1{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh;
+}
+
+.linha1 h2{
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.artigos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+
+.block-artigos{
+    height: 50vh;
+    width: 20vw;
+    background-color: darkgray;
+
+    display: grid;
+    grid-template-rows: 6fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    border-radius: 30px;
+
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.603);
+}
+
+.block-artigos .foto-artigo{
+   width: 20vw;
+   height: 30vh;
+   border-radius: 30px;
+}
+
+.block-artigos p a img{
+    background-color: #081035;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.editar-artigos{
+    display: grid;
+    grid-template-rows: 6fr 3fr;
+    margin: 5vw;
+    align-items: center;
+}
+
+.editar-artigos .block-titulo-foto .titulo-foto{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+}
+
+.block-titulo-foto{
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    
+}
+
+.importar-fotos{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+}
+
+.input-titulo{
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.438);
+    width: 60%;
+    height: 6vh;
+    font-size: 2em;
+}
+
+.foto{
+    width: 20vw;
+    height: 20vw;
+    background-color: aquamarine;
+}
+
+label{
+    font-size: 2em;
+}
+
+.input-fotos{
+    padding: 20px;
+}
