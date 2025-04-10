@@ -150,6 +150,37 @@ h2{
 
 /* fim do css horarios */
 
+.artigos-centrais{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    gap: 30px;
+    margin-top: 5vh;
+}
+
 .assunto{
-    
+    height: 60vh;
+    width: 25vw;
+    background-color: rgb(173, 173, 173);
+    border-radius: 40px 0px 40px 0px;
+    box-shadow: 3px 2px 0px 0px rgba(0, 0, 0, 0.39);
+    display: grid;
+    justify-items: center;
+    text-decoration: none;
+    grid-template-rows: 4fr 2fr 3fr;
+}
+
+.logo-artigos-centrais{
+    width: 100%;
+    border-radius: 40px 0px 40px 0px;
+}
+
+.titulo-artigos-centrais{
+    font-size: 1.4em;
+    color: black;
+}
+
+.resumo-artigos-centrais{
+    text-decoration: none;
+    color: black;
 }
