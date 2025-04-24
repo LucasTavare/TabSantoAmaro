@@ -150,7 +150,7 @@ h2{
 
 /* fim do css horarios */
 
-.artigos-centrais{
+.leituras{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
@@ -170,17 +170,102 @@ h2{
     grid-template-rows: 4fr 2fr 3fr;
 }
 
-.logo-artigos-centrais{
+.logo-leituras{
     width: 100%;
     border-radius: 40px 0px 40px 0px;
 }
 
-.titulo-artigos-centrais{
+.titulo-leituras{
     font-size: 1.4em;
     color: black;
 }
 
-.resumo-artigos-centrais{
+.resumo-leituras{
     text-decoration: none;
     color: black;
+}
+
+.artigos-centrais{
+    display: grid;
+    justify-items: center;
+    width: 100v2;
+    text-align: center;
+}
+
+.main-artigos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+
+    margin-top: 5vh;
+}
+
+.bloco-artigos{
+    height: 90vh;
+    width: 25vw;
+    background-color: #081035;
+    border-radius: 40px 40px 0px 0px;
+    display: grid;
+    grid-template-rows: 4fr 1fr 2fr;
+
+    box-shadow: 3px 2px 0px 0px rgba(0, 0, 0, 0.603);
+}
+
+.bloco-artigos:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.img-bloco-artigos{
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.h2-bloco-artigos{
+    color: white;
+    font-size: 1.6em;
+}
+
+.p-bloco-artigos{
+    color: white;
+    font-weight: 100;
+    padding-top: 4vh;
+    font-size: 0.8em;
+}
+
+.button-bloco-artigos{
+    background-color: aliceblue;
+    color: #081035;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.end{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 10vh;
+}
+
+.end p {
+    font-size: 1.6em;
+}
+
+form{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: grid;
+    gap: 40px;
+}
+
+form div{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+}
+
+form div input{
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.438);
+    width: 100%;
+    font-size: 1.4em;
 }
