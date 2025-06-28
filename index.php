@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>Tabernaculo da Fé Santo amaro</title>
-    <link rel="stylesheet" href="css/style-index.css">
-</head>
-<body>
+<?php include './includes/header.php'; ?>
 
-    <header>
-
-        <div class="banner">
-
-            
-
-            <div class="nav-bar">
-
-                <div class="logo"><img src="./img/logo.png" alt="Logo"></div>
-
-                <div class="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">William Marriom Branham</a></li>
-                        <li><a href="albuns.html">Fotos</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- fim do navbar -->
-
-            <div class="tittle">
-                <h1>A Mensagem Revelada</h1>
-            </div>
-
-        </div>
-
-    </header>
+    <link rel="stylesheet" href="./css/mobile/style-mobile-index.css">
 
     <main>
 
-        <div class="container-index">
+        <h1 style="margin-top: -20vh">A MENSAGEM REVELADA</h1>
+
+        <div class="container">
 
             <img src="./img/carrosel-vers.png" alt="" class="carousel-ver"></img>
 
@@ -60,7 +26,7 @@
                 <div class="horarios">
 
                     <ul>
-                        <li style="font-weight: bold; font-size: 2em;">Cultos aos Domingos</li>
+                        <li class="title-hor" >Cultos aos Domingos</li>
                         <li>08:00 | Programa de radio</li>
                         <li>08:30 | Escolinha das Crianças</li>
                         <li>09:00 | Escola Dominical</li>
@@ -69,12 +35,12 @@
                     </ul>
 
                     <ul>
-                        <li style="font-weight: bold; font-size: 2em;">Quarta-Feira a Noite</li>
+                        <li class="title-hor" >Quarta-Feira a Noite</li>
                         <li>19:30 | Culto de oração</li>
                     </ul>
 
                     <ul>
-                        <li style="font-weight: bold; font-size: 2em;">Culto de Santa Ceia</li>
+                        <li class="title-hor" >Culto de Santa Ceia</li>
                         <li>OBS: Aos primeiros <br> domingos do mês </li>
                         <li>17:30 | Culto de Santa Ceia</li>
                     </ul>
@@ -88,7 +54,7 @@
             <hr style="width: 80vw; margin-top: 5vh;">
 
             <div class="leituras">
-                <a href="" class="assunto" target="_blank">
+                <a href="wmb.php" class="assunto" target="_blank">
                     <img src="./img/leituras/irmaoBranham1.png" alt="Foto Irmao Branham" class="logo-leituras">
                     <h2 class="titulo-leituras">Willian M. Branham</h2>
                     <p class="resumo-leituras">
@@ -98,27 +64,16 @@
                         mensagen sem PDF.
                     </p>
                 </a>
-                <a href="" class="assunto" target="_blank">
-                    <img src="./img/leituras/historico.png" alt="Foto da Igreja" class="logo-leituras">
-                    <h2 class="titulo-leituras">Histórico</h2>
-                    <p class="resumo-leituras">
-                        Eu Pr. Waltair Borges Vitória fui<br>
-                        ordenado a Pastor da Mensagem,<br>
-                        no dia 21 de junho de 1998, na <br>
-                        greja de São Paulo. Quer saber<br>
-                        mais ? Clique aqui
-                    </p>
-                </a>
-                <a href="" class="assunto" target="_blank">
-                    <img src="./img/leituras/pontosDoutrinarios.png" alt="pontos doutrinarios" class="logo-leituras">
+                <a href="pontos-doutrinarios.php" class="assunto" target="_blank">
+                    <img src="./img/leituras/pontosDoutrinarios.jpg" alt="pontos doutrinarios" class="logo-leituras">
                     <h2 class="titulo-leituras">Pontos Doutrinarios</h2>
                     <p class="resumo-leituras">
                         Para mais informações sobre o<br>
                         que nós cremos. Clique aqui.
                     </p>
                 </a>
-                <a href="" class="assunto" target="_blank">
-                    <img src="./img/leituras/vozDeDeus.png" alt="A voz de Deus" class="logo-leituras">
+                <a href="voz-de-deus.php" class="assunto" target="_blank">
+                    <img src="./img/leituras/voz-de-deus.jpg" alt="A voz de Deus" class="logo-leituras">
                     <h2 class="titulo-leituras">A Voz de Deus</h2>
                     <p class="resumo-leituras">
                         A VGR é um ministério que se<br>
@@ -272,7 +227,9 @@
 
     </main>
 
-    
-    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+                        
 </body>
 </html>

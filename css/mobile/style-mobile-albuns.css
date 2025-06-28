@@ -1,0 +1,36 @@
+@media only screen and (max-width: 932px){
+
+    .container{
+        overflow-x: hidden;
+    }
+    .nav-bar {
+    display: none;
+    }
+
+    #menu-hamburguer {
+        padding: 20px;
+        background-color: white;
+        display: block;
+    }
+    
+    .fileira-albuns{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    }
+
+    .title-albuns{
+        font-size: 1em;
+
+    }
+
+    .album{
+    height: 30vh;
+    width: 25vw;
+    background-color: gray;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    }
+
+}

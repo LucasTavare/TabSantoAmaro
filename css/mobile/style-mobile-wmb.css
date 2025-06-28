@@ -1,0 +1,29 @@
+@media only screen and (max-width: 932px){
+    .nav-bar {
+    display: none;
+    }
+
+    #menu-hamburguer {
+        padding: 20px;
+        background-color: white;
+        display: block;
+    }
+
+    h1{
+        width: 100vw;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .text{
+    margin-top: 8vh;
+    width: 70vw;
+    font-size: 1em;
+    text-align: center;
+
+    h2{
+        font-size: 1.7em;
+    }
+}
+
+}

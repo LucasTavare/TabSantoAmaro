@@ -1,0 +1,9 @@
+.banner{
+    background-image: url('../img/leituras/pontosDoutrinarios.jpg');
+}
+
+.text{
+    margin-top: 8vh;
+    width: 56vw;
+    font-size: 1.4em;
+}

@@ -1,0 +1,16 @@
+
+.fileira-albuns{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 5vh;
+}
+
+.album{
+    height: 55vh;
+    width: 25vw;
+    background-color: gray;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
