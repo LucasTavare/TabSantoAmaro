@@ -13,8 +13,8 @@
             <div class="corpo-menu">
                 <img src="" alt="">
             <ul>
-                <li><a href="artigos-adm.html">Artigos</a></li>
-                <li><a href="allbuns-adm.html">Albuns</a></li>
+                <li><a href="artigos-adm.php">Artigos</a></li>
+                <li><a href="albuns-adm.php">Albuns</a></li>
                 <li><a href="perfil">Perfil</a></li>
             </ul>
             </div>
@@ -24,7 +24,7 @@
             <div class="linha1">
                 <h2>Artigos</h2>
             </div>
-            <form id="cadArtigo" action="../backend/cadastroArtigos.php" method="POST">
+            <form action="../backend/editarArtigos.php" method="post" enctype="multipart/form-data">
                 <div class="editar-artigos">
                     <div class="block-titulo-foto">
                         <div class="titulo-foto">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="importar-fotos">
                                 <label for="Importar Fotos">Importar Fotos</label>
-                                <input name="foto" class="input-fotos" id="foto" type="file">
+                                <input class="input-fotos" type="file" name="imagem" id="imagem">
                             </div>
                         </div>
                         <div class="foto">
@@ -45,7 +45,7 @@
 
                 </div>
 
-                <button type="submit" onclick="cadArtigo()">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
             
         </div>

@@ -22,27 +22,6 @@ const loginUser = async () => {
         })
   }
 
-  const cadArtigo = async () => {
-  
-    let dados = new FormData($('#cadArtigo')[0]);
-
-    const result = fetch('../backend/cadastroArtigo.php', {
-      method: 'POST',
-      body: dados
-    })
-      .then((response => response.json()))
-      .then((result) => {
-        if(result.retorno == 'erro'){
-          Swal.fire({
-            icon: 'error',
-            title: 'Atenção',
-            text: result.mensagem,
-          })
-        }else{
-          window.location.replace("http://localhost/TabSantoAmaro/admin/artigos-adm.html")
-        }
-      })
-}
 
   function negrito() {
     const textarea = document.getElementById("editor");

@@ -13,8 +13,8 @@
             <div class="corpo-menu">
                 <img src="" alt="">
             <ul>
-                <li><a href="artigos-adm.html">Artigos</a></li>
-                <li><a href="allbuns-adm.html">Albuns</a></li>
+                <li><a href="artigos-adm.php">Artigos</a></li>
+                <li><a href="albuns-adm.php">Albuns</a></li>
                 <li><a href="perfil">Perfil</a></li>
             </ul>
             </div>

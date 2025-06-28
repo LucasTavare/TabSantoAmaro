@@ -1,5 +1,30 @@
 <?php include './includes/header.php'; ?>
 
+<?php 
+
+include './backend/conexao.php';
+
+try{
+
+    $sql = "SELECT * FROM tb_artigos";
+
+    $comando = $con -> prepare($sql);
+
+    $comando -> execute();
+
+    $dados = $comando -> fetchAll(PDO::FETCH_ASSOC);
+
+    // echo "<pre>";
+    // var_dump($dados);
+    // echo "</pre>";
+
+}catch(PDOException $erro){
+    echo $erro->getMessage();
+}
+
+?>
+
+
     <link rel="stylesheet" href="./css/mobile/style-mobile-index.css">
 
     <main>
@@ -112,75 +137,21 @@
                 <h2>Artigos Centrais</h2>
 
                     <div class="main-artigos">
+                        <?php
+                            foreach($dados as $d):
+                        ?>
                         <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/pedra-no-caminho.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Uma pedra no caminho</h2>
+                            <img src="./img/artigos-centrais/<?php echo $d['capaArtigo']?>" alt="" class="img-bloco-artigos">
+                            <h2 class="h2-bloco-artigos"><?php echo $d['tituloArtigo']?></h2>
                             <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
+                                
                             </p>
                             <a href="" class="button-bloco-artigos">Leia Mais</a>
+                        </div>
                         
-                        </div>
-                        <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/estrada.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Oque te impede de progredir?</h2>
-                            <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
-                            </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
-                        </div>
-                        <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/agua.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Uma pedra no caminho</h2>
-                            <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
-                            </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
-                        </div>
-
-                        <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/pedra-no-caminho.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Uma pedra no caminho</h2>
-                            <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
-                            </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
-                        </div>
-                        <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/estrada.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Oque te impede de progredir?</h2>
-                            <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
-                            </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
-                        </div>
-                        <div class="bloco-artigos">
-                            <img src="./img/artigos-centrais/agua.png" alt="" class="img-bloco-artigos">
-                            <h2 class="h2-bloco-artigos">Uma pedra no caminho</h2>
-                            <p class="p-bloco-artigos">
-                                “Um certo grau de opisição é importante para um
-                                homem. As pipas sobem contra e não com o vento.
-                                ”John Neal O único obstáculo para a água poder voar
-                                com mais…
-                            </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
-                        </div>
-
+                        <?php
+                            endforeach;
+                        ?>
                     </div>
 
             </div>
