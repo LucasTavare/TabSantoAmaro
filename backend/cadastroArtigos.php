@@ -10,6 +10,7 @@ try{
 
     $titulo = $_POST['titulo'];
     $editor = $_POST['editor'];
+    $resumo = $_POST['resumo'];
 
 
 
@@ -43,7 +44,7 @@ try{
     
     // ======================================================================================================================= //
 
-    $sql = "INSERT INTO tb_artigos(`tituloArtigo`,`textoArtigo`,`capaArtigo`)VALUES('$titulo','$editor','$nome_final_imagem')";
+    $sql = "INSERT INTO tb_artigos(`tituloArtigo`,`textoArtigo`,`capaArtigo`,`resumoArtigo`)VALUES('$titulo','$editor','$nome_final_imagem','$resumo')";
 
     $comando = $con ->prepare($sql);
 

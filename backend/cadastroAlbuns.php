@@ -9,7 +9,7 @@ try{
     // echo "</pre>";
 
     $titulo = $_POST['titulo'];
-    $editor = $_POST['editor'];
+    $resumo = $_POST['resumo'];
 
 
 
@@ -43,13 +43,13 @@ try{
     
     // ======================================================================================================================= //
 
-    $sql = "INSERT INTO tb_artigos(`tituloArtigo`,`textoArtigo`,`capaArtigo`)VALUES('$titulo','$editor','$nome_final_imagem')";
+    $sql = "INSERT INTO tb_album(`titulo`,`descricao`,`capaAlbum`)VALUES('$titulo','$editor','$nome_final_imagem')";
 
     $comando = $con ->prepare($sql);
 
     $comando->execute();
 
-    header('Location: ../admin/artigos-adm.php');
+    header('Location: ../admin/albuns-adm.php');
 
     $con = null;
 

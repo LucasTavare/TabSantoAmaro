@@ -1,6 +1,6 @@
 <?php
 include '../backend/conexao.php';
-
+include './include/header.php';
 $id = $_GET['id'];
 
 try {
@@ -24,54 +24,40 @@ try {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigos - Tabernaculo da Fé Santo Amaro</title>
-    <link rel="stylesheet" href="css/style-artigos.css">
-    <link rel="stylesheet" href="css/style-menu.css">
-</head>
-<body>
-    <main>
-        <div class="menu">
-            <div class="corpo-menu">
-                <img src="" alt="">
-            <ul>
-                <li><a href="artigos-adm.php">Artigos</a></li>
-                <li><a href="albuns-adm.php">Albuns</a></li>
-                <li><a href="perfil">Perfil</a></li>
-            </ul>
-            </div>
-            
-        </div>
+
         <div class="container">
             <div class="linha1">
                 <h2>Artigos</h2>
             </div>
-            <form action="../backend/cadastroArtigos.php" method="post" enctype="multipart/form-data">
+            <form action="../backend/alterarArtigos.php" method="post" enctype="multipart/form-data">
                 <div class="editar-artigos">
+                    <input style="display: none;" type="text" id="id" name="id" value="<?php echo $dados[0]['id'] ?>">
                     <div class="block-titulo-foto">
                         <div class="titulo-foto">
                             <div class="titulos">
-                                <input id="titulo" name="titulo" class="input-titulo" type="text" value="<?php echo $dados[0]['tituloArtigo'] ?>">
-                            </div>
+                                <input name="titulo" class="input-titulo" type="text" value="<?php echo $dados[0]['tituloArtigo'] ?>">
+                            </div>  
                             <div class="importar-fotos">
                                 <label for="Importar Fotos">Importar Fotos</label>
                                 <input class="input-fotos" type="file" name="imagem" id="imagem">
                             </div>
                         </div>
                         <div class="foto">
-
+                            <img src="../img/artigos-centrais/<?php echo $dados[0]['capaArtigo']?>" alt="">
                         </div>
                     </div>
                     <textarea id="editor" name="editor" class="descricao-salvar"></textarea>
-                    <button type="button" onclick="negrito()">Negrito</button>
+                    <br> 
+                    <div class="button-fuction">
+                        <button class="negrito" type="button" onclick="negrito()">Negrito</button>
+                        <button class="negrito" type="button" onclick="subTitulo()">SubTitulo</button>
+                    </div>
+                    <br> 
+                    <textarea id="resumo" name="resumo" class="descricao-salvar"></textarea>
 
                 </div>
 
-                <button type="submit">editar</button>
+                <button class="button-editar" type="submit">editar</button>
             </form>
             
         </div>

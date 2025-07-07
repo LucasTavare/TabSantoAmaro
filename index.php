@@ -107,7 +107,7 @@ try{
                         saber mais ? Clique aqui.
                     </p>
                 </a>
-                <a href="" class="assunto" target="_blank">
+                <a href="albuns.php" class="assunto" target="_blank">
                     <img src="./img/leituras/fotos.png" alt="Fotos" class="logo-leituras">
                     <h2 class="titulo-leituras">Fotos</h2>
                     <p class="resumo-leituras">
@@ -144,9 +144,9 @@ try{
                             <img src="./img/artigos-centrais/<?php echo $d['capaArtigo']?>" alt="" class="img-bloco-artigos">
                             <h2 class="h2-bloco-artigos"><?php echo $d['tituloArtigo']?></h2>
                             <p class="p-bloco-artigos">
-                                
+                                <?php echo $d['resumoArtigo']?>
                             </p>
-                            <a href="" class="button-bloco-artigos">Leia Mais</a>
+                            <a href="leituras-artigos.php?id=<?php echo $d['id']?>" class="button-bloco-artigos">Leia Mais</a>
                         </div>
                         
                         <?php
@@ -169,26 +169,6 @@ try{
                 </div>
                 
 
-                <form action="">
-                    <div>
-                        <label for="nome">Nome</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="telefone">Telefone</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="mensagem">Mensagem</label>
-                        <input type="text">
-                    </div>
-                    
-                </form>
-
 
             </div>
 
@@ -198,7 +178,7 @@ try{
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
                         

@@ -33,4 +33,18 @@
     justify-items: center;
     }
 
+    .bloco-fotos-album{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .bloco-fotos-album img{
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .container{
+        margin-top: -10vh;
+    }
+
 }

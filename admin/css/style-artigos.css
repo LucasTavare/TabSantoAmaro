@@ -108,7 +108,7 @@ main{
     font-size: 2em;
 }
 
-.foto{
+.foto img{
     width: 20vw;
     height: 20vw;
     background-color: aquamarine;
@@ -118,10 +118,23 @@ label{
     font-size: 2em;
 }
 
+.negrito{
+    width: 20vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .input-fotos{
     padding: 20px;
 }
 
 .descricao-salvar{
     height: 30vh;
+}
+
+.button-editar{
+    width: 20vw;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 5vw;
 }

@@ -1,4 +1,26 @@
-<?php include './includes/header.php'; ?>
+<?php 
+include './includes/header.php'; 
+include './backend/conexao.php';
+
+try {
+
+    $sql = "SELECT * FROM tb_album";
+
+    $comando = $con->prepare($sql);
+
+    $comando->execute();
+
+    $dados = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+    // echo '<pre>';
+    //     var_dump($dados);
+    // echo '</pre>';
+
+} catch (PDOException $erro) {
+    echo $erro->getMessage();
+}
+
+?>
 
 <link rel="stylesheet" href="./css/style-albuns.css">
 <link rel="stylesheet" href="./css/mobile/style-mobile-albuns.css">
@@ -10,24 +32,15 @@
 
     <div class="container">
         <div class="fileira-albuns">
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2025</h1>
-            </div>
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2024</h1>
-            </div>
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2023</h1>
-            </div>
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2025</h1>
-            </div>
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2024</h1>
-            </div>
-            <div class="album">
-                <h1 class="title-albuns" style="margin-top:20vh;">Retiro 2023</h1>
-            </div>
+            <?php
+                foreach($dados as $d):
+            ?>
+            <a href="ver-albuns.php?id=<?php echo $d['id']?>"class="album" style="background-image: url('./img/albuns/<?php echo $d['capaAlbum']?>');">
+                <h1 class="title-albuns" style="margin-top:20vh;"><?php echo $d['titulo']?></h1>
+            </a>
+            <?php
+                endforeach;
+            ?>
         </div>
     </div>
 

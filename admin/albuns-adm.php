@@ -1,67 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albuns - Tabernaculo da Fé Santo Amaro</title>
-    <link rel="stylesheet" href="css/style-Albuns.css">
-    <link rel="stylesheet" href="css/style-menu.css">
-</head>
-<body>
-    <main>
-        <div class="menu">
-            <div class="corpo-menu">
-                <img src="" alt="">
-            <ul>
-                <li><a href="artigos-adm.php">Artigos</a></li>
-                <li><a href="albuns-adm.php">Albuns</a></li>
-                <li><a href="perfil">Perfil</a></li>
-            </ul>
-            </div>
-            
-        </div>
+<?php 
+
+include '../backend/conexao.php';
+include './include/header.php';
+
+try{
+
+    $sql = "SELECT * FROM tb_album";
+
+    $comando = $con -> prepare($sql);
+
+    $comando -> execute();
+
+    $dados = $comando -> fetchAll(PDO::FETCH_ASSOC);
+
+    // echo "<pre>";
+    // var_dump($dados);
+    // echo "</pre>";
+
+}catch(PDOException $erro){
+    echo $erro->getMessage();
+}
+
+?>
+
         <div class="container">
             <div class="linha1">
                 <h2>Álbuns de Fotos</h2>
-                <a href="" class="button-adicionar">Criar Albuns</a>
+                <a href="adicionar-albuns.php" class="button-adicionar">Criar Albuns</a>
             </div>
             <div class="albuns">
+                <?php
+                    foreach($dados as $d):
+                ?>
+
                 <div class="block-albuns">
-                    <img  class="foto-albuns" src="./img/banner-login.png" alt="">
-                    <h3>Retiro 2025</h3>
+                    <img class="foto-albuns" src="../img/artigos-centrais/<?php echo $d['capaAlbum'];?>" alt="">
+                    <h3><?php echo $d['titulo']?></h3>
                     <p>
-                        <a href="">
+                        <a href="adc-fotos-albuns.php?id=<?php echo $d['id']?>">
                             <img src="./img/editar.png" alt="">
                         </a>
-                        <a href="">
+                        <a href="../backend/deletar-album.php?id=<?php echo $d['id']?>">
                             <img src="./img/lixeira.png" alt="">
                         </a>
                     </p>
                 </div>
-                <div class="block-albuns">
-                    <img  class="foto-albuns" src="./img/banner-login.png" alt="">
-                    <h3>Retiro 2025</h3>
-                    <p>
-                        <a href="">
-                            <img src="./img/editar.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="./img/lixeira.png" alt="">
-                        </a>
-                    </p>
-                </div>
-                <div class="block-albuns">
-                    <img  class="foto-albuns" src="./img/banner-login.png" alt="">
-                    <h3>Retiro 2025</h3>
-                    <p>
-                        <a href="">
-                            <img src="./img/editar.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="./img/lixeira.png" alt="">
-                        </a>
-                    </p>
-                </div>
+               
+                <?php
+                    endforeach;
+                ?>
+                
             </div>
         </div>
     </main>

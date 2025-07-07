@@ -12,3 +12,4 @@ $('#menu-hamburguer .modal-exit, #menu-hamburguer #icon-modal-exit, #menu-hambur
 
     $('#menu-hamburguer .modal-wrapper').css('display', 'none');
 });
+

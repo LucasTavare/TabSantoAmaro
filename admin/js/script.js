@@ -17,7 +17,7 @@ const loginUser = async () => {
               text: result.mensagem,
             })
           }else{
-            window.location.replace("http://localhost/TabSantoAmaro/admin/artigos-adm.html")
+            window.location.replace("http://localhost/TabSantoAmaro/admin/artigos-adm.php")
           }
         })
   }
@@ -35,3 +35,15 @@ const loginUser = async () => {
     // Substitui texto selecionado pelo formatado
     textarea.value = texto.substring(0, start) + formatado + texto.substring(end);
 }
+
+  function subTitulo() {
+    const textarea = document.getElementById("editor");
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const texto = textarea.value;
+
+    const selecionado = texto.substring(start, end);
+    const formatado = "<h2>" + selecionado + "</h2>";
+
+    textarea.value = texto.substring(0, start) + formatado + texto.substring(end);
+  }

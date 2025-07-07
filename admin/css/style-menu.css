@@ -25,6 +25,8 @@
     gap: 30px;
     list-style: none; 
     text-align: center;
+    align-items: center;
+    height: 100%;
 }
 
 .menu .corpo-menu ul li a{

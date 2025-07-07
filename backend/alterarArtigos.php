@@ -4,8 +4,10 @@ include '../backend/conexao.php';
 
 try{
 
+    $id     = $_POST['id'];
     $titulo = $_POST['titulo'];
     $editor  = $_POST['editor'];
+    $resumo  = $_POST['resumo'];
 
      // ===================================================================================================================================
     // upload de img
@@ -30,12 +32,11 @@ try{
 
     move_uploaded_file($_FILES['imagem']['tmp_name'],$pasta.$nome_final_imagem);
 
-    $sql = "UPDATE tb_viagens SET `titulo` = '$titulo', `local` = '$local', `valor` = '$valor', `desc` = '$desc', `imagem` = '$nome_final_imagem' 
+    $sql = "UPDATE tb_artigos SET `tituloArtigo` = '$titulo', `textoArtigo` = '$editor', `capaArtigo` = '$nome_final_imagem', `resumoArtigo` = '$resumo' 
     WHERE id = $id;";
 
     }else{
-        $sql = "UPDATE tb_viagens SET `titulo` = '$titulo', `local` = '$local', `valor` = '$valor', `desc` = '$desc' WHERE id = $id;";
-    }
+         $sql = "UPDATE tb_artigos SET `tituloArtigo` = '$titulo', `textoArtigo` = '$editor', `resumoArtigo` = '$resumo' WHERE id = $id;";
     
     // ===================================================================================================================================
 
@@ -43,8 +44,8 @@ try{
 
     $comando -> execute();
 
-    header('location: ../admin/gerenciar-viagens.php?id='.$id);
-
+    header('Location: ../admin/artigos-adm.php');
+    }
 }catch(PDOException $erro){
     echo $erro->getMessage();
 }
